@@ -1,0 +1,17 @@
+.sidebar_button_active{
+    -fx-background-color: 
+        linear-gradient(#e78e19 0%, #e78e19 90%, #a86813 90%, #a86813 100%);
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+}
+
+.sidebar_button_inactive{
+    -fx-background-color: rgb(109, 0, 0);
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    transition-duration: 0.5s;
+}
+
+.sidebar_button_inactive:hover{
+    -fx-background-color: rgb(112, 54, 54);
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane prefHeight="522.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CharController">
+   <content>
+      <AnchorPane prefHeight="521.0" prefWidth="602.0">
+         <children>
+            <Button id="btn_prev_char" fx:id="btn_prev_char" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#anterior" prefHeight="45.0" prefWidth="45.0" text="&lt;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button id="btn_next_char" fx:id="btn_next_char" layoutX="543.0" layoutY="14.0" mnemonicParsing="false" onAction="#proximo" prefHeight="45.0" prefWidth="45.0" style="-fx-border-color: black; -fx-background-color: white;" text="&gt;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="lista_chars" layoutX="74.0" layoutY="16.0" onAction="#setChar" prefHeight="43.0" prefWidth="455.0" promptText="Personagem" style="-fx-border-color: black; -fx-background-color: white;" visibleRowCount="5" />
+            <Pane layoutX="14.0" layoutY="64.0" prefHeight="501.0" prefWidth="599.0">
+               <children>
+                  <Label fx:id="titulo_char" prefHeight="50.0" prefWidth="401.0" text="Titulo">
+                     <font>
+                        <Font name="News701 BT Bold" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="subtitulo_char" layoutX="1.0" layoutY="57.0" prefHeight="25.0" prefWidth="444.0" text="Subtitulo">
+                     <font>
+                        <Font name="News701 BT Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="103.0" fitWidth="101.0" layoutX="467.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                  <Line endX="307.0" layoutX="83.0" layoutY="50.0" startX="-74.0" />
+                  <TextArea fx:id="historia_box" editable="false" layoutY="130.0" pickOnBounds="false" prefHeight="200.0" prefWidth="387.0" style="-fx-border-style: none; -fx-background-color: transparent;" />
+                  <Label fx:id="subtitulo_char1" layoutX="1.0" layoutY="102.0" prefHeight="25.0" prefWidth="444.0" text="História">
+                     <font>
+                        <Font name="News701 BT Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="edit_checkbox" layoutX="495.0" layoutY="7.0" mnemonicParsing="false" onAction="#setEditMode" text="Edit mode" />
+                  <Button fx:id="btn_salvar_historia" layoutX="335.0" layoutY="342.0" mnemonicParsing="false" onAction="#setText" text="Salvar" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
